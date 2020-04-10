@@ -11,3 +11,319 @@ html, body {
     color: $main-color;
 }
 
+.header {
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header_left {
+    width: calc(100% - 115px);
+}
+
+.header__navigation {
+    height: 107px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+}
+
+.header__logo {
+    background-color: $blue-color;
+    width: 345px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.header__logo-image {
+    margin-right:  18px;
+}
+
+.header__name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    & h1 {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+    }
+
+    & h2 {
+        font-weight: 400;
+        font-size: 14px;
+        color: #FFFFFF;
+    }
+}
+
+.header__ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header__li:not(:last-child) {
+    margin-right: 45px;
+}
+
+.header__li:last-child {
+    margin-right: 115px;
+}
+
+
+.header__menu_right {
+    width: 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    bottom: -100px;
+    //height: 100%;
+
+    & ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin-bottom: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+        //height: 100%;
+
+        & a {
+            width: 52px;
+            height: 52px;
+            border: 2px solid $green-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            margin-bottom: 28px;
+
+            &:hover, &:focus {
+                background-color: $green-color;
+                transition: all 0.4s ease;
+            }
+
+        }
+
+        & li:last-child {
+            margin-bottom: 72px;
+        }
+    }
+}
+
+
+.header__li {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.header__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: $main-color;
+    //border-bottom: 2px solid transparent;
+    position: relative;
+
+
+
+    &::after {
+        content: '';
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 37px;
+        background-color: transparent;
+    }
+
+    &:hover, &:focus {
+        text-decoration: none;
+        //border-bottom: 2px solid $blue-color;
+        color: $main-color;
+
+
+        &::after {
+            background-color: $blue-color;
+            transition: all 0.4s ease;
+        }
+
+    }
+
+    &_accent {
+        color: $red-color;
+
+        &:hover, &:focus {
+            color: $red-color;
+
+            &::after {
+                background-color: $red-color;
+            }
+        }
+    }
+}
+
+.header__info {
+    background: url('../img/header-lady.png') no-repeat bottom right,
+                url('../img/header-background.png') no-repeat top left;
+    background-size: contain, cover;
+    height: 100%;
+    padding-left: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+
+    & h2 {
+        font-weight: 700;
+        font-size: 90px;
+        line-height: 110px;
+        color: $blue-color;
+        text-transform: uppercase;
+        padding-top: 100px;
+        padding-bottom: 25px;
+    }
+
+    & h3 {
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 39px;
+        padding-bottom: 87px;
+    }
+
+    & button {
+        font-weight: 600;
+        font-size: 18px;
+        color: #FFFFFF;
+        background-color: $blue-color;
+        width: 256px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid $blue-color;
+        outline: none;
+        margin-bottom: 165px;
+
+
+        &:hover, &:focus {
+            //background-color: $green-color;
+            background-color: #ffffff;
+            color: $blue-color;
+            transition: all 0.4s ease;
+
+            //color: $main-color;
+        }
+    }
+}
+
+.header__icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+
+    & figure {
+        margin-right: 60px;
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+
+    }
+    & figcaption {
+        & p:first-child {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 97.8%;
+            color: $lightgray-color;
+            margin-bottom: 4px;
+        }
+
+        & a, & p:last-child {
+            font-weight: 400;
+            font-size: 16px;
+            color: $main-color;
+        }
+    }
+}
+
+.figure-image__wrapper {
+    position: relative;
+    margin-right: 20px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        display: flex;
+        width: 52px;
+        height: 52px;
+        background-color: $green-color;
+        border-radius: 100%;
+        top: -15px;
+        left: -15px;
+    }
+    & img {
+        position: relative;
+    }
+}
+
+.about-us {
+    margin-top: 200px;
+    margin-bottom: 100px;
+    margin-left: 285px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    & h2 {
+        font-weight: 700;
+        font-size: 70px;
+        color: $blue-color;
+        margin-bottom: 46px;
+    }
+
+    & p {
+        font-weight: 300;
+        font-size: 18px;
+        margin-right: 160px;
+    }
+}
+
+.about-us_left {
+    width: 50%;
+}
+
+.about-us_right {
+    position: relative;
+
+    &::after {
+        width: 560px;
+        height: 30px;
+        background-color: $green-color;
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        right: 0;
+    }
+}
