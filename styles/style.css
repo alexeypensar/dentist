@@ -312,8 +312,7 @@ html, body {
 
 .about-us {
   margin-top: 200px;
-  margin-bottom: 100px;
-  margin-left: 285px;
+  margin-bottom: 180px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -336,7 +335,8 @@ html, body {
 }
 
 .about-us_right {
-  position: relative;
+  position: absolute;
+  right: 0;
 }
 .about-us_right::after {
   width: 560px;
