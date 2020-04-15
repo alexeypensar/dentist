@@ -27,6 +27,40 @@
   font-weight: 700;
   font-style: normal;
 }
+@keyframes arrow {
+  0% {
+    left: -25px;
+  }
+  25% {
+    left: -10px;
+  }
+  50% {
+    left: -25px;
+  }
+  75% {
+    left: -10px;
+  }
+  100% {
+    left: -25px;
+  }
+}
+@keyframes sale {
+  0% {
+    left: 0;
+  }
+  25% {
+    left: 15px;
+  }
+  50% {
+    left: 0;
+  }
+  75% {
+    left: 15px;
+  }
+  100% {
+    left: 0;
+  }
+}
 html, body {
   font-family: "Proxima Nova", sans-serif;
   font-size: 16px;
@@ -210,7 +244,8 @@ html, body {
   line-height: 39px;
   padding-bottom: 87px;
 }
-.header__info button {
+
+.header__button {
   font-weight: 600;
   font-size: 18px;
   color: #FFFFFF;
@@ -224,7 +259,7 @@ html, body {
   outline: none;
   margin-bottom: 165px;
 }
-.header__info button:hover, .header__info button:focus {
+.header__button:hover, .header__button:focus {
   background-color: #ffffff;
   color: #3CC5F0;
   transition: all 0.4s ease;
@@ -396,7 +431,7 @@ html, body {
   position: absolute;
   content: url("../img/icons/information-link-arrow.svg");
   top: 25px;
-  left: -20px;
+  left: -25px;
 }
 .information__link:hover, .information__link:focus {
   color: #3CC5F0;
@@ -404,8 +439,9 @@ html, body {
   transition: all 0.4s ease;
 }
 .information__link:hover::before, .information__link:focus::before {
-  left: 280px;
-  transition: all 0.4s ease;
+  animation-name: arrow;
+  animation-duration: 0.8s;
+  animation-timing-function: ease;
 }
 
 .sale {
@@ -464,8 +500,14 @@ html, body {
   text-decoration: none;
 }
 .sale__banner:hover .sale__image, .sale__banner:focus .sale__image {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: all 0.4s ease;
+}
+.sale__banner:hover .sale__arrow, .sale__banner:focus .sale__arrow {
+  animation-name: sale;
+  animation-duration: 0.8s;
+  animation-timing-function: ease;
+  animation-delay: 0.4s;
 }
 .sale__banner_left h3 {
   font-weight: 700;
@@ -515,6 +557,72 @@ html, body {
 .sale__arrow {
   margin-right: 25px;
   margin-bottom: 50px;
+  position: relative;
+}
+
+.services {
+  margin-top: 200px;
+  margin-bottom: 140px;
+}
+
+.heading__secondary {
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 85px;
+  color: #3CC5F0;
+}
+
+.services__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 70px;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 21%;
+  margin-bottom: 57px;
+}
+
+.service__icon {
+  margin-bottom: 12px;
+  position: relative;
+  margin-left: 15px;
+}
+.service__icon::before {
+  width: 52px;
+  height: 52px;
+  content: "";
+  position: absolute;
+  border-radius: 100%;
+  background-color: #D2FFC2;
+  left: -15px;
+  top: -15px;
+  z-index: -1;
+}
+
+.service__heading {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #3CC5F0;
+}
+
+.service__text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 145.3%;
+  color: #4F4F4F;
+}
+
+.services__button {
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */

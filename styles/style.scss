@@ -48,7 +48,7 @@ html, body {
 }
 
 .header__logo-image {
-    margin-right:  18px;
+    margin-right: 18px;
 }
 
 .header__name {
@@ -136,6 +136,7 @@ html, body {
     justify-content: center;
     align-items: center;
 }
+
 .header__link {
     display: flex;
     justify-content: center;
@@ -145,9 +146,7 @@ html, body {
     font-size: 18px;
     line-height: 25px;
     color: $main-color;
-    //border-bottom: 2px solid transparent;
     position: relative;
-
 
 
     &::after {
@@ -162,7 +161,6 @@ html, body {
 
     &:hover, &:focus {
         text-decoration: none;
-        //border-bottom: 2px solid $blue-color;
         color: $main-color;
 
 
@@ -188,7 +186,7 @@ html, body {
 
 .header__info {
     background: url('../img/header-lady.png') no-repeat bottom right,
-                url('../img/header-background.png') no-repeat top left;
+    url('../img/header-background.png') no-repeat top left;
     background-size: contain, cover;
     height: 100%;
     padding-left: 175px;
@@ -215,29 +213,28 @@ html, body {
         padding-bottom: 87px;
     }
 
-    & button {
-        font-weight: 600;
-        font-size: 18px;
-        color: #FFFFFF;
-        background-color: $blue-color;
-        width: 256px;
-        height: 70px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 2px solid $blue-color;
-        outline: none;
-        margin-bottom: 165px;
+
+}
+
+.header__button {
+    font-weight: 600;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: $blue-color;
+    width: 256px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $blue-color;
+    outline: none;
+    margin-bottom: 165px;
 
 
-        &:hover, &:focus {
-            //background-color: $green-color;
-            background-color: #ffffff;
-            color: $blue-color;
-            transition: all 0.4s ease;
-
-            //color: $main-color;
-        }
+    &:hover, &:focus {
+        background-color: #ffffff;
+        color: $blue-color;
+        transition: all 0.4s ease;
     }
 }
 
@@ -255,6 +252,7 @@ html, body {
         margin-top: 0;
 
     }
+
     & figcaption {
         & p:first-child {
             font-weight: 300;
@@ -287,6 +285,7 @@ html, body {
         top: -15px;
         left: -15px;
     }
+
     & img {
         position: relative;
     }
@@ -345,7 +344,7 @@ html, body {
 .information__ul_wrapper {
     display: flex;
     flex-direction: row;
-    //justify-content: space-between;
+
 }
 
 .information__ul {
@@ -358,17 +357,11 @@ html, body {
 .information__ul_right .information__li {
     margin-left: 200px;
 }
+
 .information__li {
     margin-bottom: 33px;
     padding-left: 28px;
-    //
-    //&:first-of-type .information__number::before, &:last-of-type .information__number::before {
-    //    left: -30px;
-    //}
-    //&:last-of-type .information__number, &:first-of-type .information__number
-    //{
-    //    letter-spacing: 4px;
-    //}
+
 }
 
 .information__number {
@@ -377,7 +370,7 @@ html, body {
     font-size: 28px;
     line-height: 34px;
     margin-right: 32px;
-    //letter-spacing: 1px;
+
     &::before {
         content: '';
         position: absolute;
@@ -396,11 +389,9 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    //align-items: baseline;
     font-weight: 300;
     font-size: 16px;
     line-height: 145%;
-    //width: 60%;
 }
 
 .information__ul_left .information__li:first-of-type .information__number {
@@ -430,18 +421,18 @@ html, body {
         position: absolute;
         content: url('../img/icons/information-link-arrow.svg');
         top: 25px;
-        left: -20px;
+        left: -25px;
     }
 
     &:hover, &:focus {
         color: $blue-color;
-        //background-color: $blue-color;
         text-decoration: none;
         transition: all 0.4s ease;
 
         &::before {
-            left: 280px;
-            transition: all 0.4s ease;
+            animation-name: arrow;
+            animation-duration: 0.8s;
+            animation-timing-function: ease;
         }
     }
 
@@ -449,6 +440,7 @@ html, body {
 
 .sale {
     position: relative;
+
     &::after {
         left: 0;
         right: 0;
@@ -492,6 +484,7 @@ html, body {
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
+
     & .sale__image {
         position: absolute;
         object-fit: cover;
@@ -503,9 +496,17 @@ html, body {
 
     &:hover, &:focus {
         text-decoration: none;
+
         & .sale__image {
-            transform: scale(1.1);
+            transform: scale(1.05);
             transition: all 0.4s ease;
+        }
+
+        & .sale__arrow {
+            animation-name: sale;
+            animation-duration: 0.8s;
+            animation-timing-function: ease;
+            animation-delay: 0.4s;
         }
     }
 
@@ -518,6 +519,7 @@ html, body {
             margin-top: 50px;
             margin-left: 50px;
         }
+
         & p {
             font-weight: 600;
             font-size: 18px;
@@ -537,6 +539,7 @@ html, body {
             line-height: 44px;
             color: $red-color;
         }
+
         & h4 {
             margin-left: 50px;
             font-weight: 700;
@@ -547,6 +550,7 @@ html, body {
             color: #333333;
 
         }
+
         & p {
             font-weight: 600;
             font-size: 18px;
@@ -561,7 +565,6 @@ html, body {
 
 .sale__link {
     margin-left: 50px;
-    //margin-top: 58px;
     display: flex;
     flex-direction: row;
 
@@ -570,4 +573,71 @@ html, body {
 .sale__arrow {
     margin-right: 25px;
     margin-bottom: 50px;
+    position: relative;
+}
+
+.services {
+    margin-top: 200px;
+    margin-bottom: 140px;
+}
+
+.heading__secondary {
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 85px;
+    color: $blue-color;
+}
+
+.services__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 21%;
+    margin-bottom: 57px;
+}
+
+.service__icon {
+    margin-bottom: 12px;
+    position: relative;
+    margin-left: 15px;
+    &::before {
+        width: 52px;
+        height: 52px;
+        content: '';
+        position: absolute;
+        border-radius: 100%;
+        background-color: $green-color;
+        left: -15px;
+        top: -15px;
+        z-index: -1;
+    }
+}
+
+.service__heading {
+    //margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: $blue-color;
+}
+
+.service__text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 145.3%;
+    color: $main-color;
+}
+
+.services__button {
+    margin: 0 auto;
 }
