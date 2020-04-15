@@ -643,3 +643,210 @@ html, body {
 .services__button {
     margin: 0 auto;
 }
+
+.our-team .heading__secondary {
+    margin-bottom: 70px;
+}
+
+// todo поправить косяк с фотографией Володько (либо слишком маленькая, либо слишком большая)
+
+.our-team__gallery {
+    margin-bottom: 140px;
+
+    .slick-track {
+        height: 600px;
+    }
+
+
+    .wrap {
+        position: relative;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        //background: url(https://images.unsplash.com/photo-1485069203392-8e1aeb1ebf02?auto=format&fit=crop&w=1054&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D) center no-repeat;
+        //-webkit-background-size: cover;
+        //background-size: cover;
+        overflow: hidden;
+    }
+
+    //.wrap:after {
+    //    content:'';
+    //    position: absolute;
+    //    z-index: 2;
+    //    top: 0;
+    //    left: 0;
+    //    right: 0;
+    //    bottom: 0;
+    //    //background: rgba(0,0,0,.5);
+    //}
+
+    .slider {
+        position: relative;
+        z-index: 200;
+        padding: 0 0;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        width: 40px;
+        height: 50px;
+        line-height: 50px;
+        margin-top: -25px;
+        border: none;
+        background: transparent;
+        color: #000;
+        font-family: monospace;
+        font-size: 5rem;
+        z-index: 300;
+        outline: none;
+    }
+
+    .slick-prev {
+        left: -50px;
+        text-align: left;
+    }
+
+    .slick-next {
+        right: -50px;
+        text-align: right;
+    }
+
+
+
+    .item.slick-slide {
+        width: 400px;
+        height: 400px !important;
+        transition: transform .4s;
+        position: relative;
+        background-color: $green-color;
+        & .item__description .item__text {
+            display: none;
+        }
+    }
+
+    .item__name {
+        position: relative;
+    }
+
+    .item__text {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 22px;
+        color: #333333;
+    }
+
+
+    .item.slick-slide {
+        transform: scale(0.7) translate(-16px);
+        & .item__name {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: #4F4F4F;
+            width: 100%;
+
+        }
+
+        & .item__description {
+            border-bottom: 3px solid $green-color;
+            bottom: -80px;
+        }
+
+
+    }
+
+    .item.slick-slide.slick-center + .slick-slide {
+        transform: scale(0.8) translate(50px);
+        & .item__name {
+            //top: -50px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            color: #4F4F4F;
+
+        }
+
+        & .item__description {
+            border-bottom: 7px solid $green-color;
+            bottom: -90px;
+        }
+
+    }
+
+
+
+    .item.slick-slide.slick-active {
+        transform: scale(0.8) translate(-50px);
+        & .item__name {
+            //top: -50px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            color: #4F4F4F;
+
+        }
+        & .item__description {
+            border-bottom: 7px solid $green-color;
+            bottom: -90px;
+        }
+    }
+
+    .item.slick-slide.slick-center + .slick-slide + .item.slick-slide {
+        transform: scale(0.7)  translate(16px);
+
+        & .item__name {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: #4F4F4F;
+            width: 100%;
+
+        }
+
+        & .item__description {
+            border-bottom: 3px solid $green-color;
+            bottom: -80px;
+        }
+    }
+
+    .item.slick-slide.slick-center {
+        transform: scale(1);
+
+        & .item__description .item__text {
+            display: block;
+        }
+        & .item__name {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            color: $blue-color;
+            top: 10px;
+            margin-bottom: 20px;
+        }
+
+        & .item__description {
+            border-bottom: 15px solid $green-color;
+            bottom: -170px;
+        }
+    }
+
+    //.slick-center:after {
+    //    opacity: 0;
+    //}
+}
+
+.item__description {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: -170px;
+    padding-left: 40px;
+    padding-bottom: 30px;
+    width: 400px;
+
+}
