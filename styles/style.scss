@@ -107,26 +107,29 @@ html, body {
         margin-top: 100px;
         //height: 100%;
 
-        & a {
-            width: 52px;
-            height: 52px;
-            border: 2px solid $green-color;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 100%;
-            margin-bottom: 28px;
 
-            &:hover, &:focus {
-                background-color: $green-color;
-                transition: all 0.4s ease;
-            }
 
         }
 
         & li:last-child {
             margin-bottom: 72px;
         }
+
+}
+
+.header__social-link {
+    width: 52px;
+    height: 52px;
+    border: 2px solid $green-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    margin-bottom: 28px;
+
+    &:hover, &:focus {
+        background-color: $green-color;
+        transition: all 0.4s ease;
     }
 }
 
@@ -957,3 +960,123 @@ html, body {
 
 //todo добавить ещё отзывы, чтобы показывались на кнопку
 //todo popup с возможностью добавить отзыв прикрутить
+
+
+.contacts {
+
+    & .heading__secondary {
+        margin-bottom: 55px;
+    }
+}
+
+.contacts__icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    & figure {
+        display: flex;
+        flex-direction: row;
+    }
+
+    & figcaption p:first-child {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 97.8%;
+        color: $lightgray-color;
+        margin-bottom: 7px;
+    }
+
+    & figcaption p:last-child, & figcaption a {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 84.8%;
+        color: $main-color;
+    }
+
+    & figcaption a {
+        text-decoration: none;
+        &:hover, &:focus {
+            text-decoration: underline;
+        }
+    }
+}
+
+.contacts__map-and-questions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
+
+}
+
+.contacts__map, .contacts__questions {
+    width: 50%;
+}
+
+.contacts__questions {
+    padding: 80px 120px;
+    height: 576px;
+    border-right: 15px solid $green-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+
+    & .header__button {
+        margin-bottom: 0;
+        margin-top: 50px;
+    }
+}
+
+.questions__heading {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    color: $blue-color;
+}
+
+
+.questions__input {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-bottom: 1px solid $lightgray-color;
+    color: $main-color;
+    font-weight: 300;
+    font-size: 16px;
+
+    &::placeholder {
+        font-weight: 300;
+        font-size: 16px;
+        color: #BDBDBD;
+    }
+}
+
+
+
+
+.footer {
+    height: 130px;
+    //background-color: #ccc;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer__logo {
+    background-color: $blue-color;
+    width: 30%;
+}
+
+.footer__info {
+    background-color: $main-color;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
