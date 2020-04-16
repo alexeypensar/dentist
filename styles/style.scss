@@ -654,7 +654,7 @@ html, body {
 // todo поправить косяк с фотографией Володько (либо слишком маленькая, либо слишком большая)
 
 .our-team__gallery {
-    margin-bottom: 140px;
+    margin-bottom: 100px;
 
     .slick-track {
         height: 700px;
@@ -867,7 +867,7 @@ html, body {
 // todo со счётчиком слайдов разобраться, возможно, через методы slick'а
 
 .feedback {
-    margin-top: 140px;
+    margin-top: 0;
     margin-bottom: 130px;
 }
 
@@ -978,6 +978,10 @@ html, body {
     & figure {
         display: flex;
         flex-direction: row;
+
+        & img[src*='vk'] {
+            padding-top: 15px;
+        }
     }
 
     & figcaption p:first-child {
@@ -1061,15 +1065,36 @@ html, body {
 
 .footer {
     height: 130px;
-    //background-color: #ccc;
     margin-top: 70px;
+    background: linear-gradient(to right, $blue-color 0%, $blue-color 29.9%, $main-color 30%, $main-color 100%);
+}
+
+.footer__wrapper {
     display: flex;
     flex-direction: row;
+    height: 130px;
 }
 
 .footer__logo {
     background-color: $blue-color;
     width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    & h2 {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: #fff;
+    }
+    & h3 {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 98.8%;
+        color: #FFFFFF;
+    }
 }
 
 .footer__info {
@@ -1079,4 +1104,47 @@ html, body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    &_left {
+        display: flex;
+        flex-direction: column;
+
+        & p {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 24px;
+            color: #BDBDBD;
+            text-transform: uppercase;
+            padding-left: 60px;
+        }
+    }
+
+    &_right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+
 }
+
+.footer__politic {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #BDBDBD;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    &:hover, &:focus {
+        color: #fff;
+    }
+}
+
+.footer__copyright {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #BDBDBD;
+}
+
