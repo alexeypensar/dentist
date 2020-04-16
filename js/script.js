@@ -10,8 +10,13 @@ $('.slider').slick({
     focusOnSelect: true,
     cssEase: 'linear',
     touchMove: true,
-    prevArrow:'<button class="slick-prev"> < </button>',
-    nextArrow:'<button class="slick-next"> > </button>',
+    prevArrow:'<button class="slick-prev"></button>',
+    nextArrow:'<button class="slick-next"></button>',
+    speed: 100,
+    // centerPadding: '0px',
+
+
+
 
     //         responsive: [
     //             {
@@ -25,14 +30,16 @@ $('.slider').slick({
 });
 
 
-var imgs = $('.slider img');
+let imgs = $('.slider img');
 imgs.each(function(){
-    var item = $(this).closest('.item');
+    let item = $(this).closest('.item');
     item.css({
         'background-image': 'url(' + $(this).attr('src') + ')',
         'background-position': 'center',
         '-webkit-background-size': 'cover',
-        'background-size': 'cover',
+        'background-size': 'cover'
     });
     $(this).hide();
 });
+
+
