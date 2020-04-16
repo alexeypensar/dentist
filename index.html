@@ -12,7 +12,7 @@
 
 </head>
 <body>
-
+<!--todo фавиконку добавить-->
 <header class="header container-fluid">
     <div class="header_left">
         <nav class="header__navigation">
@@ -24,12 +24,12 @@
                 </div>
             </div>
             <ul class="header__ul">
-                <li class="header__li"><a class="header__link header__link_accent" href="">Акции</a></li>
-                <li class="header__li"><a class="header__link" href="">О нас</a></li>
-                <li class="header__li"><a class="header__link" href="">Услуги</a></li>
-                <li class="header__li"><a class="header__link" href="">Врачи</a></li>
-                <li class="header__li"><a class="header__link" href="">Отзывы</a></li>
-                <li class="header__li"><a class="header__link" href="">Контакты</a></li>
+                <li class="header__li"><a class="header__link header__link_accent" href="#sale">Акции</a></li>
+                <li class="header__li"><a class="header__link" href="#about-us">О нас</a></li>
+                <li class="header__li"><a class="header__link" href="#services">Услуги</a></li>
+                <li class="header__li"><a class="header__link" href="#our-team">Врачи</a></li>
+                <li class="header__li"><a class="header__link" href="#feedback">Отзывы</a></li>
+                <li class="header__li"><a class="header__link" href="#contacts">Контакты</a></li>
             </ul>
         </nav>
 
@@ -82,7 +82,7 @@
 </header>
 
 <main>
-    <section class="about-us container">
+    <section class="about-us container" id="about-us">
         <article class="about-us_left">
             <h2>О нас</h2>
             <p>Мы - стоматологическая клиника “Линия улыбки”.</p>
@@ -153,7 +153,7 @@
         <a class="information__link" href="">Лицензия и сертификаты</a>
     </section>
 
-    <section class="sale">
+    <section class="sale" id="sale">
         <div class="sale__wrapper container">
             <h2 class="sale__heading">Акции</h2>
 
@@ -178,8 +178,8 @@
             </div>
         </div>
     </section>
-
-    <section class="services container">
+<!--    todo всё, что не по БЭМ - переписать на классы-->
+    <section class="services container" id="services">
         <h2 class="heading__secondary">Наши услуги</h2>
 
         <div class="services__list">
@@ -265,7 +265,7 @@
         <button class="header__button services__button">Узнать цены</button>
     </section>
 
-    <section class="our-team">
+    <section class="our-team" id="our-team">
         <h2 class="heading__secondary container">Наша команда</h2>
 
         <article class="our-team__gallery">
@@ -336,7 +336,7 @@
         </article>
 
     </section>
-    <section class="feedback container">
+    <section class="feedback container" id="feedback">
         <h2 class="heading__secondary">Отзывы</h2>
 
         <section class="feedback__list">
@@ -400,7 +400,7 @@
 
 
 
-    <section class="contacts container">
+    <section class="contacts container" id="contacts">
 
         <h2 class="heading__secondary">Контакты</h2>
         <div class="contacts__icons">

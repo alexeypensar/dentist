@@ -61,6 +61,10 @@
     left: 0;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
   font-family: "Proxima Nova", sans-serif;
   font-size: 16px;
@@ -634,7 +638,7 @@ html, body {
   margin-bottom: 100px;
 }
 .our-team__gallery .slick-track {
-  height: 700px;
+  height: 600px;
 }
 .our-team__gallery .wrap {
   position: relative;
@@ -654,7 +658,7 @@ html, body {
 }
 .our-team__gallery .slick-arrow {
   position: absolute;
-  top: 85%;
+  top: 77%;
   width: 70px;
   height: 70px;
   background: transparent;
@@ -666,11 +670,11 @@ html, body {
   align-items: center;
 }
 .our-team__gallery .slick-prev {
-  left: 43%;
+  left: 34%;
   background: url("../img/icons/gallery-arrow-left.svg") no-repeat center center;
 }
 .our-team__gallery .slick-next {
-  right: 43%;
+  right: 34%;
   background: url("../img/icons/gallery-arrow-right.svg") no-repeat center center;
 }
 .our-team__gallery .item.slick-slide {
@@ -873,6 +877,18 @@ html, body {
 
 .contacts .heading__secondary {
   margin-bottom: 55px;
+}
+.contacts figure:nth-child(5) {
+  margin-left: 220px;
+}
+.contacts figure:nth-child(5) .figure-image__wrapper {
+  margin-right: 0;
+}
+.contacts figure:last-child {
+  margin-right: 0;
+}
+.contacts figure:last-child .figure-image__wrapper {
+  margin-right: 0;
 }
 
 .contacts__icons {

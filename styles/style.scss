@@ -2,6 +2,9 @@
 @import "__fonts.scss";
 @import "__variables.scss";
 
+html {
+    scroll-behavior: smooth;
+}
 
 html, body {
     font-family: 'Proxima Nova', sans-serif;
@@ -657,7 +660,7 @@ html, body {
     margin-bottom: 100px;
 
     .slick-track {
-        height: 700px;
+        height: 600px;
         //min-width: 100%;
         //transition: all 0.3s ease;
     }
@@ -684,7 +687,7 @@ html, body {
 
     .slick-arrow {
         position: absolute;
-        top: 85%;
+        top: 77%;
         width: 70px;
         height: 70px;
         //line-height: 50px;
@@ -702,16 +705,16 @@ html, body {
 
 
     }
-
+//todo шрифты в rem
     .slick-prev {
-        left: 43%;
+        left: 34%;
         background: url('../img/icons/gallery-arrow-left.svg') no-repeat center center;
 
 
     }
 
     .slick-next {
-        right: 43%;
+        right: 34%;
         background: url('../img/icons/gallery-arrow-right.svg') no-repeat center center;
 
 
@@ -966,6 +969,25 @@ html, body {
 
     & .heading__secondary {
         margin-bottom: 55px;
+    }
+
+    & figure {
+        //margin-right: 0;
+
+        &:nth-child(5) {
+            margin-left: 220px;
+
+            & .figure-image__wrapper {
+                margin-right: 0;
+            }
+        }
+        &:last-child {
+            margin-right: 0;
+
+            & .figure-image__wrapper {
+                margin-right: 0;
+            }
+        }
     }
 }
 
