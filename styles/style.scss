@@ -863,17 +863,97 @@ html, body {
 
 // todo со счётчиком слайдов разобраться, возможно, через методы slick'а
 
-//
-///* slide when not active/center*/
-//.slick-slide,
-//.slick-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"] {
-//    transform: scale(0.7) !important;
-//    transition: transform 0.3s !important;
-//}
-//
-///* slide when active/center */
-//.slick-center,
-//.slick-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"] {
-//    transform: scale(1) !important;
-//}
+.feedback {
+    margin-top: 140px;
+    margin-bottom: 130px;
+}
 
+.feedback .heading__secondary {
+    margin-bottom: 50px;
+}
+
+.feedback__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.feedback__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 25%;
+    margin-bottom: 75px;
+}
+
+.feedback__avatar {
+    margin-right: 20px;
+    width: 57px;
+    height: 57px;
+    border-radius: 50%;
+    background-color: $green-color;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img[src*='svg'] {
+        padding-left: 5px;
+    }
+}
+
+.feedback__info_top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feedback__name {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: $main-color;
+}
+
+.feedback__date {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: $lightgray-color;
+}
+
+.feedback__text {
+    margin-top: 17px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 23px;
+    color: $main-color;
+}
+
+.feedback__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+
+    & .information__link {
+        width: 220px;
+        margin-top: 0;
+        &::before {
+            content: '';
+        }
+    }
+
+    & .header__button {
+        width: 220px;
+        margin-right: 35px;
+        margin-bottom: 0;
+    }
+}
+
+//todo добавить ещё отзывы, чтобы показывались на кнопку
+//todo popup с возможностью добавить отзыв прикрутить
