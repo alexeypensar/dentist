@@ -621,6 +621,11 @@ html, body {
     margin-bottom: 12px;
     position: relative;
     margin-left: 15px;
+
+    & img {
+        width: 45px;
+        height: 45px;
+    }
     &::before {
         width: 52px;
         height: 52px;
@@ -1004,7 +1009,10 @@ html, body {
 
         & img[src*='vk'] {
             padding-top: 15px;
+
         }
+
+
     }
 
     & figcaption p:first-child {
