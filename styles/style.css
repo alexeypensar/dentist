@@ -857,6 +857,10 @@ html, body {
   align-items: flex-start;
 }
 
+.feedback__list_hided {
+  display: none;
+}
+
 .feedback__item {
   display: flex;
   flex-direction: row;

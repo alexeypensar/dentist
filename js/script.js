@@ -42,4 +42,10 @@ imgs.each(function(){
     $(this).hide();
 });
 
-
+// feedback show-more block script
+$(document).ready(function() {
+    $('#feedbackShowMore').on('click', function() {
+        $('.feedback__list_hided').css('display', 'flex');
+        $(this).css('display', 'none');
+    })
+});

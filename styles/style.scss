@@ -900,6 +900,10 @@ html, body {
     align-items: flex-start;
 }
 
+.feedback__list_hided {
+    display: none;
+}
+
 .feedback__item {
     display: flex;
     flex-direction: row;
@@ -977,7 +981,6 @@ html, body {
     }
 }
 
-//todo добавить ещё отзывы, чтобы показывались на кнопку
 //todo popup с возможностью добавить отзыв прикрутить
 
 
