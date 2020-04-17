@@ -134,13 +134,15 @@ html, body {
   justify-content: center;
   align-items: flex-start;
 }
-.header__name h1 {
+
+.header__heading_h1 {
   font-weight: 600;
   font-size: 1.125rem;
   line-height: 22px;
   color: #FFFFFF;
 }
-.header__name h2 {
+
+.header__heading_h2 {
   font-weight: 400;
   font-size: 0.875rem;
   color: #FFFFFF;
@@ -169,7 +171,8 @@ html, body {
   position: relative;
   bottom: -100px;
 }
-.header__menu_right ul {
+
+.header__ul_right {
   list-style-type: none;
   padding-left: 0;
   margin-bottom: 0;
@@ -178,7 +181,8 @@ html, body {
   align-items: center;
   margin-top: 100px;
 }
-.header__menu_right li:last-child {
+
+.header__li_right:last-child {
   margin-bottom: 72px;
 }
 
@@ -251,7 +255,8 @@ html, body {
   justify-content: flex-start;
   align-items: flex-start;
 }
-.header__info h2 {
+
+.header__info_h2 {
   font-weight: 700;
   font-size: 5.625rem;
   line-height: 110px;
@@ -260,7 +265,8 @@ html, body {
   padding-top: 100px;
   padding-bottom: 25px;
 }
-.header__info h3 {
+
+.header__info_h3 {
   font-weight: 300;
   font-size: 2rem;
   line-height: 39px;
@@ -294,30 +300,44 @@ html, body {
   align-items: center;
   width: 50%;
 }
-.header__icons figure {
+
+.header__figure {
   margin-right: 60px;
   display: flex;
   flex-direction: row;
   margin-top: 0;
 }
-.header__icons figcaption p:first-child {
+
+.header__figcaption-text_top {
   font-weight: 300;
   font-size: 1.125rem;
   line-height: 97.8%;
   color: #828282;
   margin-bottom: 4px;
 }
-.header__icons figcaption a, .header__icons figcaption p:last-child {
+
+.header__figcaption-text_bottom {
   font-weight: 400;
   font-size: 1rem;
   color: #4F4F4F;
 }
 
-.figure-image__wrapper {
+.header__figcaption-link {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #4F4F4F;
+  text-decoration: none;
+}
+.header__figcaption-link:hover, .header__figcaption-link:focus {
+  text-decoration: underline;
+  color: #4F4F4F;
+}
+
+.contacts__figure-wrapper {
   position: relative;
   margin-right: 20px;
 }
-.figure-image__wrapper::before {
+.contacts__figure-wrapper::before {
   content: "";
   position: absolute;
   display: flex;
@@ -328,8 +348,13 @@ html, body {
   top: -15px;
   left: -15px;
 }
-.figure-image__wrapper img {
+
+.header__image {
   position: relative;
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  min-height: 45px;
 }
 
 .about-us {
@@ -340,13 +365,15 @@ html, body {
   justify-content: space-between;
   align-items: flex-start;
 }
-.about-us h2 {
+
+.about-us__heading {
   font-weight: 700;
   font-size: 4.375rem;
   color: #3CC5F0;
   margin-bottom: 46px;
 }
-.about-us p {
+
+.about-us__text {
   font-weight: 300;
   font-size: 1.125rem;
   margin-right: 160px;
@@ -531,7 +558,8 @@ html, body {
   animation-timing-function: ease;
   animation-delay: 0.4s;
 }
-.sale__banner_left h3 {
+
+.sale__heading_left {
   font-weight: 700;
   font-size: 1.875rem;
   line-height: 147.8%;
@@ -539,14 +567,16 @@ html, body {
   margin-top: 50px;
   margin-left: 50px;
 }
-.sale__banner_left p {
+
+.sale__text_left {
   font-weight: 600;
   font-size: 1.125rem;
   line-height: 22px;
   color: #FFFFFF;
   margin-bottom: 50px;
 }
-.sale__banner_right h3 {
+
+.sale__heading_right {
   margin-top: 50px;
   margin-left: 50px;
   font-weight: 700;
@@ -554,7 +584,8 @@ html, body {
   line-height: 44px;
   color: #F95871;
 }
-.sale__banner_right h4 {
+
+.sale__subheading_right {
   margin-left: 50px;
   font-weight: 700;
   font-size: 1.5rem;
@@ -562,7 +593,8 @@ html, body {
   margin-top: 10px;
   color: #333333;
 }
-.sale__banner_right p {
+
+.sale__text_right {
   font-weight: 600;
   font-size: 1.125rem;
   line-height: 22px;
@@ -617,10 +649,6 @@ html, body {
   position: relative;
   margin-left: 15px;
 }
-.service__icon img {
-  width: 45px;
-  height: 45px;
-}
 .service__icon::before {
   width: 52px;
   height: 52px;
@@ -631,6 +659,11 @@ html, body {
   left: -15px;
   top: -15px;
   z-index: -1;
+}
+
+.service__image {
+  width: 45px;
+  height: 45px;
 }
 
 .service__heading {
@@ -899,17 +932,35 @@ html, body {
 .contacts .heading__secondary {
   margin-bottom: 55px;
 }
-.contacts figure:nth-child(5) {
+
+.contacts__figure {
+  display: flex;
+  flex-direction: row;
+}
+.contacts__figure:nth-child(5) {
   margin-left: 220px;
 }
-.contacts figure:nth-child(5) .figure-image__wrapper {
+.contacts__figure:nth-child(5) .contacts__figure-wrapper {
   margin-right: 0;
 }
-.contacts figure:last-child {
+.contacts__figure:last-child {
   margin-right: 0;
 }
-.contacts figure:last-child .figure-image__wrapper {
+.contacts__figure:last-child .contacts__figure-wrapper {
   margin-right: 0;
+}
+.contacts__figure img[src*=vk] {
+  padding-top: 15px;
+}
+
+.contacts__figure-wrapper_social::before {
+  left: -10px;
+  top: -10px;
+}
+
+.contacts__image {
+  position: relative;
+  z-index: 1;
 }
 
 .contacts__icons {
@@ -918,31 +969,32 @@ html, body {
   justify-content: space-between;
   align-items: center;
 }
-.contacts__icons figure {
-  display: flex;
-  flex-direction: row;
-}
-.contacts__icons figure img[src*=vk] {
-  padding-top: 15px;
-}
-.contacts__icons figcaption p:first-child {
+
+.contacts__text_top {
   font-weight: 300;
   font-size: 1.125rem;
   line-height: 97.8%;
   color: #828282;
   margin-bottom: 7px;
 }
-.contacts__icons figcaption p:last-child, .contacts__icons figcaption a {
+
+.contacts__text_bottom {
   font-weight: 400;
   font-size: 1rem;
   line-height: 84.8%;
   color: #4F4F4F;
 }
-.contacts__icons figcaption a {
+
+.contacts__link {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 84.8%;
+  color: #4F4F4F;
   text-decoration: none;
 }
-.contacts__icons figcaption a:hover, .contacts__icons figcaption a:focus {
+.contacts__link:hover, .contacts__link:focus {
   text-decoration: underline;
+  color: #4F4F4F;
 }
 
 .contacts__map-and-questions {
@@ -1014,13 +1066,15 @@ html, body {
   justify-content: flex-start;
   align-items: center;
 }
-.footer__logo h2 {
+
+.footer__heading_h2 {
   font-weight: 600;
   font-size: 1.125rem;
   line-height: 22px;
   color: #fff;
 }
-.footer__logo h3 {
+
+.footer__heading_h3 {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 98.8%;
@@ -1039,19 +1093,20 @@ html, body {
   display: flex;
   flex-direction: column;
 }
-.footer__info_left p {
+.footer__info_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.footer__text {
   font-weight: 300;
   font-size: 1rem;
   line-height: 24px;
   color: #BDBDBD;
   text-transform: uppercase;
   padding-left: 60px;
-}
-.footer__info_right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
 }
 
 .footer__politic {

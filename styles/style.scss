@@ -7,6 +7,8 @@ html {
     scroll-behavior: smooth;
 }
 
+
+// todo ещё раз после всего все шрифты проверить на rem
 html, body {
     font-family: 'Proxima Nova', sans-serif;
     font-size: 16px;
@@ -19,7 +21,6 @@ html, body {
 //    width: 1620px;
 //    max-width: 1620px;
 //}
-
 
 
 .header {
@@ -62,19 +63,19 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+}
 
-    & h1 {
-        font-weight: 600;
-        font-size: 1.125rem;
-        line-height: 22px;
-        color: #FFFFFF;
-    }
+.header__heading_h1 {
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 22px;
+    color: #FFFFFF;
+}
 
-    & h2 {
-        font-weight: 400;
-        font-size: 0.875rem;
-        color: #FFFFFF;
-    }
+.header__heading_h2 {
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #FFFFFF;
 }
 
 .header__ul {
@@ -100,27 +101,24 @@ html, body {
     align-items: center;
     position: relative;
     bottom: -100px;
-    //height: 100%;
-
-    & ul {
-        list-style-type: none;
-        padding-left: 0;
-        margin-bottom: 0;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 100px;
-        //height: 100%;
 
 
+}
 
-        }
+.header__ul_right {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
 
-        & li:last-child {
-            margin-bottom: 72px;
-        }
 
+}
+
+.header__li_right:last-child {
+    margin-bottom: 72px;
 }
 
 .header__social-link {
@@ -204,25 +202,23 @@ html, body {
     justify-content: flex-start;
     align-items: flex-start;
 
+}
 
-    & h2 {
-        font-weight: 700;
-        font-size: 5.625rem;
-        line-height: 110px;
-        color: $blue-color;
-        text-transform: uppercase;
-        padding-top: 100px;
-        padding-bottom: 25px;
-    }
+.header__info_h2 {
+    font-weight: 700;
+    font-size: 5.625rem;
+    line-height: 110px;
+    color: $blue-color;
+    text-transform: uppercase;
+    padding-top: 100px;
+    padding-bottom: 25px;
+}
 
-    & h3 {
-        font-weight: 300;
-        font-size: 2rem;
-        line-height: 39px;
-        padding-bottom: 87px;
-    }
-
-
+.header__info_h3 {
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 39px;
+    padding-bottom: 87px;
 }
 
 .header__button {
@@ -254,32 +250,44 @@ html, body {
     align-items: center;
     width: 50%;
 
-    & figure {
-        margin-right: 60px;
-        display: flex;
-        flex-direction: row;
-        margin-top: 0;
 
-    }
+}
 
-    & figcaption {
-        & p:first-child {
-            font-weight: 300;
-            font-size: 1.125rem;
-            line-height: 97.8%;
-            color: $lightgray-color;
-            margin-bottom: 4px;
-        }
+.header__figure {
+    margin-right: 60px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
 
-        & a, & p:last-child {
-            font-weight: 400;
-            font-size: 1rem;
-            color: $main-color;
-        }
+}
+
+
+.header__figcaption-text_top {
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 97.8%;
+    color: $lightgray-color;
+    margin-bottom: 4px;
+}
+
+.header__figcaption-text_bottom {
+    font-weight: 400;
+    font-size: 1rem;
+    color: $main-color;
+}
+
+.header__figcaption-link {
+    font-weight: 400;
+    font-size: 1rem;
+    color: $main-color;
+    text-decoration: none;
+    &:hover, &:focus {
+        text-decoration: underline;
+        color: $main-color;
     }
 }
 
-.figure-image__wrapper {
+.contacts__figure-wrapper {
     position: relative;
     margin-right: 20px;
 
@@ -295,32 +303,39 @@ html, body {
         left: -15px;
     }
 
-    & img {
-        position: relative;
-    }
+
+}
+
+.header__image {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    min-height: 45px;
 }
 
 .about-us {
     margin-top: 200px;
     margin-bottom: 180px;
-    //margin-left: 285px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
 
-    & h2 {
-        font-weight: 700;
-        font-size: 4.375rem;
-        color: $blue-color;
-        margin-bottom: 46px;
-    }
 
-    & p {
-        font-weight: 300;
-        font-size: 1.125rem;
-        margin-right: 160px;
-    }
+}
+
+.about-us__heading {
+    font-weight: 700;
+    font-size: 4.375rem;
+    color: $blue-color;
+    margin-bottom: 46px;
+}
+
+.about-us__text {
+    font-weight: 300;
+    font-size: 1.125rem;
+    margin-right: 160px;
 }
 
 .about-us_left {
@@ -521,56 +536,52 @@ html, body {
         }
     }
 
-    &_left {
-        & h3 {
-            font-weight: 700;
-            font-size: 1.875rem;
-            line-height: 147.8%;
-            color: #FFFFFF;
-            margin-top: 50px;
-            margin-left: 50px;
-        }
 
-        & p {
-            font-weight: 600;
-            font-size: 1.125rem;
-            line-height: 22px;
-            color: #FFFFFF;
-            margin-bottom: 50px;
+}
 
-        }
-    }
+.sale__heading_left {
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 147.8%;
+    color: #FFFFFF;
+    margin-top: 50px;
+    margin-left: 50px;
+}
 
-    &_right {
-        & h3 {
-            margin-top: 50px;
-            margin-left: 50px;
-            font-weight: 700;
-            font-size: 2.25rem;
-            line-height: 44px;
-            color: $red-color;
-        }
+.sale__text_left {
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 22px;
+    color: #FFFFFF;
+    margin-bottom: 50px;
 
-        & h4 {
-            margin-left: 50px;
-            font-weight: 700;
-            font-size: 1.5rem;
-            line-height: 1.15;
-            margin-top: 10px;
-            //line-height: 103.8%;
-            color: #333333;
+}
 
-        }
+.sale__heading_right {
+    margin-top: 50px;
+    margin-left: 50px;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 44px;
+    color: $red-color;
+}
 
-        & p {
-            font-weight: 600;
-            font-size: 1.125rem;
-            line-height: 22px;
-            color: $main-color;
-            margin-bottom: 50px;
+.sale__subheading_right {
+    margin-left: 50px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.15;
+    margin-top: 10px;
+    color: #333333;
 
-        }
-    }
+}
+
+.sale__text_right {
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 22px;
+    color: $main-color;
+    margin-bottom: 50px;
 
 }
 
@@ -622,10 +633,7 @@ html, body {
     position: relative;
     margin-left: 15px;
 
-    & img {
-        width: 45px;
-        height: 45px;
-    }
+
     &::before {
         width: 52px;
         height: 52px;
@@ -637,6 +645,11 @@ html, body {
         top: -15px;
         z-index: -1;
     }
+}
+
+.service__image {
+    width: 45px;
+    height: 45px;
 }
 
 .service__heading {
@@ -710,8 +723,8 @@ html, body {
         align-items: center;
 
 
-
     }
+
     .slick-prev {
         left: 34%;
         background: url('../img/icons/gallery-arrow-left.svg') no-repeat center center;
@@ -727,13 +740,13 @@ html, body {
     }
 
 
-
     .item.slick-slide {
         width: 400px;
         height: 400px !important;
         transition: transform .4s;
         position: relative;
         background-color: $green-color;
+
         & .item__description .item__text {
             display: none;
         }
@@ -751,9 +764,6 @@ html, body {
     }
 
 
-
-
-
     .item.slick-slide {
         transform: scale(0.7) translate(-16px);
 
@@ -765,12 +775,12 @@ html, body {
             width: 100%;
 
         }
+
         & .item__description {
             border-bottom: 3px solid $green-color;
             bottom: -80px;
         }
     }
-
 
 
     .item.slick-slide.slick-center + .slick-slide {
@@ -792,7 +802,6 @@ html, body {
     }
 
 
-
     .item.slick-slide.slick-active {
         transform: scale(0.8) translate(-50px);
 
@@ -803,6 +812,7 @@ html, body {
             color: #4F4F4F;
 
         }
+
         & .item__description {
             border-bottom: 7px solid $green-color;
             bottom: -90px;
@@ -836,6 +846,7 @@ html, body {
         & .item__description .item__text {
             display: block;
         }
+
         & .item__name {
             font-weight: 600;
             font-size: 1.25rem;
@@ -872,8 +883,6 @@ html, body {
     position: absolute;
     z-index: 200;
 }
-
-// todo со счётчиком слайдов разобраться, возможно, через методы slick'а
 
 .feedback {
     margin-top: 0;
@@ -955,6 +964,7 @@ html, body {
     & .information__link {
         width: 220px;
         margin-top: 0;
+
         &::before {
             content: '';
         }
@@ -977,24 +987,45 @@ html, body {
         margin-bottom: 55px;
     }
 
-    & figure {
-        //margin-right: 0;
 
-        &:nth-child(5) {
-            margin-left: 220px;
+}
 
-            & .figure-image__wrapper {
-                margin-right: 0;
-            }
-        }
-        &:last-child {
+.contacts__figure {
+    display: flex;
+    flex-direction: row;
+
+    &:nth-child(5) {
+        margin-left: 220px;
+
+        & .contacts__figure-wrapper {
             margin-right: 0;
-
-            & .figure-image__wrapper {
-                margin-right: 0;
-            }
         }
     }
+
+    &:last-child {
+        margin-right: 0;
+
+        & .contacts__figure-wrapper {
+            margin-right: 0;
+        }
+    }
+
+    & img[src*='vk'] {
+        padding-top: 15px;
+
+    }
+}
+
+.contacts__figure-wrapper_social::before {
+    left: -10px;
+    top: -10px;
+}
+
+.contacts__image {
+    position: relative;
+    z-index: 1;
+
+
 }
 
 .contacts__icons {
@@ -1003,40 +1034,36 @@ html, body {
     justify-content: space-between;
     align-items: center;
 
-    & figure {
-        display: flex;
-        flex-direction: row;
+}
 
-        & img[src*='vk'] {
-            padding-top: 15px;
+.contacts__text_top {
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 97.8%;
+    color: $lightgray-color;
+    margin-bottom: 7px;
+}
 
-        }
+.contacts__text_bottom {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 84.8%;
+    color: $main-color;
+}
 
+.contacts__link {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 84.8%;
+    color: $main-color;
+    text-decoration: none;
 
-    }
-
-    & figcaption p:first-child {
-        font-weight: 300;
-        font-size: 1.125rem;
-        line-height: 97.8%;
-        color: $lightgray-color;
-        margin-bottom: 7px;
-    }
-
-    & figcaption p:last-child, & figcaption a {
-        font-weight: 400;
-        font-size: 1rem;
-        line-height: 84.8%;
+    &:hover, &:focus {
+        text-decoration: underline;
         color: $main-color;
     }
-
-    & figcaption a {
-        text-decoration: none;
-        &:hover, &:focus {
-            text-decoration: underline;
-        }
-    }
 }
+
 
 .contacts__map-and-questions {
     display: flex;
@@ -1092,8 +1119,6 @@ html, body {
 }
 
 
-
-
 .footer {
     height: 130px;
     margin-top: 70px;
@@ -1114,18 +1139,21 @@ html, body {
     justify-content: flex-start;
     align-items: center;
 
-    & h2 {
-        font-weight: 600;
-        font-size: 1.125rem;
-        line-height: 22px;
-        color: #fff;
-    }
-    & h3 {
-        font-weight: 400;
-        font-size: 0.875rem;
-        line-height: 98.8%;
-        color: #FFFFFF;
-    }
+
+}
+
+.footer__heading_h2 {
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 22px;
+    color: #fff;
+}
+
+.footer__heading_h3 {
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 98.8%;
+    color: #FFFFFF;
 }
 
 .footer__info {
@@ -1140,14 +1168,7 @@ html, body {
         display: flex;
         flex-direction: column;
 
-        & p {
-            font-weight: 300;
-            font-size: 1rem;
-            line-height: 24px;
-            color: #BDBDBD;
-            text-transform: uppercase;
-            padding-left: 60px;
-        }
+
     }
 
     &_right {
@@ -1160,6 +1181,15 @@ html, body {
 
 }
 
+.footer__text {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #BDBDBD;
+    text-transform: uppercase;
+    padding-left: 60px;
+}
+
 .footer__politic {
     font-weight: 300;
     font-size: 1rem;
@@ -1167,6 +1197,7 @@ html, body {
     color: #BDBDBD;
     text-decoration: underline;
     margin-bottom: 10px;
+
     &:hover, &:focus {
         color: #fff;
     }
