@@ -61,6 +61,22 @@
     left: 0;
   }
 }
+@keyframes modalXleft {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(calc(360deg + 45deg));
+  }
+}
+@keyframes modalXright {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(calc(360deg - 45deg));
+  }
+}
 .container {
   max-width: 1620px;
   margin-right: auto;
@@ -83,6 +99,99 @@
     max-width: 480px;
   }
 }
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.modal__content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 25px;
+  border: none;
+  border-left: 15px solid #D2FFC2;
+  width: 30%;
+  z-index: 99999;
+  position: relative;
+  border-radius: 10px;
+  height: 450px;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 0;
+  height: 100%;
+}
+
+.modal__close {
+  cursor: pointer;
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: #D2FFC2;
+}
+.modal__close:hover .modal__x:first-child, .modal__close:focus .modal__x:first-child {
+  animation-name: modalXleft;
+  animation-duration: 0.8s;
+  animation-timing-function: ease;
+}
+.modal__close:hover .modal__x:last-child, .modal__close:focus .modal__x:last-child {
+  animation-name: modalXright;
+  animation-duration: 0.8s;
+  animation-timing-function: ease;
+}
+
+.modal__x {
+  width: 15px;
+  height: 3px;
+  background-color: #4F4F4F;
+  position: absolute;
+}
+.modal__x:first-child {
+  transform: rotate(45deg);
+}
+.modal__x:last-child {
+  transform: rotate(-45deg);
+}
+
+.header__button[type=submit] {
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+.modal__text {
+  color: #828282;
+  font-weight: 300;
+  font-size: 14px;
+  margin-left: 12px;
+  margin-top: 5px;
+}
+
+.modal__link {
+  color: #828282;
+  text-decoration: underline;
+  font-size: 14px;
+}
+.modal__link:hover, .modal__link:focus {
+  color: #828282;
+}
+
 html {
   scroll-behavior: smooth;
 }

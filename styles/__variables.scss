@@ -40,3 +40,21 @@ $main-color: #4F4F4F;
         left: 0;
     }
 }
+
+@keyframes modalXleft {
+    0% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(calc(360deg + 45deg));
+    }
+}
+
+@keyframes modalXright {
+    0% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(calc(360deg - 45deg));
+    }
+}

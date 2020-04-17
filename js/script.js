@@ -49,3 +49,24 @@ $(document).ready(function() {
         $(this).css('display', 'none');
     })
 });
+
+
+// modal windows
+let modalOrder = document.getElementById("modalOrderWindow");
+let btn = document.getElementById("modalOrderButton");
+let span = document.getElementsByClassName("modal__close")[0];
+
+btn.onclick = function () {
+    modalOrder.style.display = "flex";
+};
+
+span.onclick = function () {
+    modalOrder.style.display = "none";
+};
+
+window.onclick = function (event) {
+    if (event.target === modalOrder) {
+        modalOrder.style.display = "none";
+    }
+};
+
