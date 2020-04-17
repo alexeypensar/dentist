@@ -1,6 +1,7 @@
 @import "reset.css";
 @import "__fonts.scss";
 @import "__variables.scss";
+@import "__adaptive.scss";
 
 html {
     scroll-behavior: smooth;
@@ -19,27 +20,7 @@ html, body {
 //    max-width: 1620px;
 //}
 
-.container {
-    max-width: 1620px;
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%;
-}
-@media screen and (max-width: 1199.98px) {
-    .container {
-        max-width: 1158px;
-    }
-}
-@media screen and (max-width: 759.98px) {
-    .container {
-        max-width: 717px;
-    }
-}
-@media screen and (max-width: 479.98px) {
-    .container {
-        max-width: 480px;
-    }
-}
+
 
 .header {
     padding-left: 0;

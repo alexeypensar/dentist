@@ -61,18 +61,6 @@
     left: 0;
   }
 }
-html {
-  scroll-behavior: smooth;
-}
-
-html, body {
-  font-family: "Proxima Nova", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: normal;
-  color: #4F4F4F;
-}
-
 .container {
   max-width: 1620px;
   margin-right: auto;
@@ -95,6 +83,18 @@ html, body {
     max-width: 480px;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  color: #4F4F4F;
+}
+
 .header {
   padding-left: 0;
   padding-right: 0;
