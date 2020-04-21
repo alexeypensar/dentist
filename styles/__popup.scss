@@ -21,8 +21,7 @@
     position: relative;
     border-radius: 10px;
     height: 450px;
-    //height: auto;
-    //max-height: 300px;
+
 }
 
 .modal__form {
@@ -36,10 +35,6 @@
 }
 
 .modal__close {
-    //color: $main-color;
-    //float: right;
-    //font-size: 34px;
-    //font-weight: 700;
     cursor: pointer;
     position: absolute;
     right: -20px;
@@ -90,8 +85,6 @@
 .header__button[type='submit'] {
     margin-bottom: 0;
     margin-top: 20px;
-
-    //margin-top: 25px;
 }
 
 .modal__text {
@@ -100,7 +93,7 @@
     font-size: 14px;
     margin-left: 12px;
     margin-top: 5px;
-    //margin-top: 20px;
+
 }
 
 .modal__link {
