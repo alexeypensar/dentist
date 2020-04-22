@@ -53,12 +53,58 @@ $(document).ready(function() {
 
 // modal windows
 let modalOrder = document.getElementById("modalOrderWindow");
-let btn = document.getElementById("modalOrderButton");
+let btn = document.getElementsByClassName("modal__show");
 let span = document.getElementsByClassName("modal__close")[0];
+let pricesHeading = document.getElementById('modalHeading');
+let pricesPlaceholder = document.getElementById('modalInput');
+let modalSubmitButton = document.getElementById('modalSubmitButton');
+let modalForm = document.getElementById('modalForm');
+let inputFile = document.createElement('input');
+inputFile.setAttribute('type', 'file');
+inputFile.style.margin = '10px auto';
 
-btn.onclick = function () {
-    modalOrder.style.display = "flex";
-};
+
+for (let i = 0; i < btn.length; i++) {
+
+    btn[i].onclick = function(e) {
+        e.preventDefault();
+        if (i === 2) {
+            pricesHeading.innerHTML ='Повторный приём';
+            pricesPlaceholder.placeholder = 'Комментарий (необязателен)';
+            modalSubmitButton.innerHTML = 'Записаться';
+
+        }
+        else if (i === 3) {
+            pricesHeading.innerHTML = 'Узнать цены';
+            pricesPlaceholder.placeholder = 'Название интересующей услуги';
+            modalSubmitButton.innerHTML = 'Узнать';
+
+        }
+
+        else if (i === 4) {
+            pricesHeading.innerHTML = 'Добавить отзыв';
+            pricesPlaceholder.placeholder = 'Введите текст отзыва';
+            modalSubmitButton.innerHTML = 'Добавить';
+            modalForm.setAttribute('enctype','multipart/form-data');
+            console.log(modalForm.childNodes.length);
+            console.log(modalForm.childNodes);
+
+            if (modalForm.childNodes.length <= 13) {
+                document.getElementsByClassName('modal__text')[0].before(inputFile);
+            }
+
+
+        }
+        else {
+            pricesHeading.innerHTML = 'Записаться на приём';
+            pricesPlaceholder.placeholder = 'Комментарий (необязателен)';
+            modalSubmitButton.innerHTML = 'Записаться';
+
+        }
+        modalOrder.style.display = "flex";
+    };
+
+}
 
 span.onclick = function () {
     modalOrder.style.display = "none";
