@@ -1,9 +1,9 @@
 @import "reset.css";
 @import "__fonts.scss";
 @import "__variables.scss";
-@import "__adaptive.scss";
 @import "__animations.scss";
 @import "__popup.scss";
+
 
 html {
     scroll-behavior: smooth;
@@ -219,16 +219,20 @@ button:hover, button:focus {
 
 
 .no-webp .header__info {
-    background: url('../img/header-lady.png') no-repeat bottom right,
-    url('../img/header-background.jpg') no-repeat top left;
+    background-image: url('../img/header-lady.png'),
+    url('../img/header-background.jpg');
     background-size: contain, cover;
+    background-repeat: no-repeat;
+    background-position: bottom right, top left;
 
 }
 
 .webp .header__info {
-    background: url('../img/header-lady.webp') no-repeat bottom right,
-    url('../img/header-background.webp') no-repeat top left;
+    background-image: url('../img/header-lady.webp'),
+    url('../img/header-background.webp');
     background-size: contain, cover;
+    background-repeat: no-repeat;
+    background-position: bottom right, top left;
 }
 
 .header__info_h2 {
@@ -1239,3 +1243,4 @@ button:hover, button:focus {
     color: #BDBDBD;
 }
 
+@import "__adaptive.scss";

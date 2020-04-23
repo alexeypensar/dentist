@@ -31,36 +31,6 @@
   font-style: normal;
   font-display: swap;
 }
-.container {
-  max-width: 1620px;
-  margin-right: auto;
-  margin-left: auto;
-  width: 100%;
-}
-
-@media screen and (max-width: 1199.98px) {
-  .container {
-    max-width: 1158px;
-  }
-
-  html, body {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 759.98px) {
-  .container {
-    max-width: 717px;
-  }
-
-  html, body {
-    font-size: 12px;
-  }
-}
-@media screen and (max-width: 479.98px) {
-  .container {
-    max-width: 480px;
-  }
-}
 @keyframes arrow {
   0% {
     left: -25px;
@@ -392,13 +362,17 @@ button:hover, button:focus {
 }
 
 .no-webp .header__info {
-  background: url("../img/header-lady.png") no-repeat bottom right, url("../img/header-background.jpg") no-repeat top left;
+  background-image: url("../img/header-lady.png"), url("../img/header-background.jpg");
   background-size: contain, cover;
+  background-repeat: no-repeat;
+  background-position: bottom right, top left;
 }
 
 .webp .header__info {
-  background: url("../img/header-lady.webp") no-repeat bottom right, url("../img/header-background.webp") no-repeat top left;
+  background-image: url("../img/header-lady.webp"), url("../img/header-background.webp");
   background-size: contain, cover;
+  background-repeat: no-repeat;
+  background-position: bottom right, top left;
 }
 
 .header__info_h2 {
@@ -1275,6 +1249,52 @@ button:hover, button:focus {
   font-size: 1rem;
   line-height: 19px;
   color: #BDBDBD;
+}
+
+.container {
+  max-width: 1620px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 1620px) {
+  .container {
+    max-width: 1158px;
+  }
+
+  html, body {
+    font-size: 14px;
+  }
+
+  .no-webp .header__info {
+    background-image: url("../img/header-lady.png"), url("../img/header-background.jpg");
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    background-position: bottom -150px right -240px, top left;
+  }
+
+  .webp .header__info {
+    background-image: url("../img/header-lady.webp"), url("../img/header-background.webp");
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    background-position: bottom -150px right -240px, top left;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .container {
+    max-width: 1158px;
+  }
+}
+@media screen and (max-width: 759.98px) {
+  .container {
+    max-width: 717px;
+  }
+}
+@media screen and (max-width: 479.98px) {
+  .container {
+    max-width: 480px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
