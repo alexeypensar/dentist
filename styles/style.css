@@ -379,14 +379,22 @@ button:hover, button:focus {
 }
 
 .header__info {
-  background: url("../img/header-lady.png") no-repeat bottom right, url("../img/header-background.jpg") no-repeat top left;
-  background-size: contain, cover;
   height: 100%;
   padding-left: 175px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+}
+
+.no-webp .header__info {
+  background: url("../img/header-lady.png") no-repeat bottom right, url("../img/header-background.jpg") no-repeat top left;
+  background-size: contain, cover;
+}
+
+.webp .header__info {
+  background: url("../img/header-lady.webp") no-repeat bottom right, url("../img/header-background.webp") no-repeat top left;
+  background-size: contain, cover;
 }
 
 .header__info_h2 {
