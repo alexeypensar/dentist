@@ -127,7 +127,7 @@ $(function() {
     $('#form').on('submit', function(e) {
         e.preventDefault();
         $.ajax({
-            url: 'send.php',
+            url: '../send/send.php',
             type: 'POST',
             contentType: false,
             processData: false,
@@ -152,7 +152,7 @@ $(function() {
     $('#form').on('submit', function(e) {
         e.preventDefault();
         $.ajax({
-            url: 'send.php',
+            url: '../send/send.php',
             type: 'POST',
             contentType: false,
             processData: false,
