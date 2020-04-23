@@ -38,10 +38,18 @@
   .container {
     max-width: 1158px;
   }
+
+  html, body {
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 759.98px) {
   .container {
     max-width: 717px;
+  }
+
+  html, body {
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 479.98px) {
@@ -371,7 +379,7 @@ button:hover, button:focus {
 }
 
 .header__info {
-  background: url("../img/header-lady.png") no-repeat bottom right, url("../img/header-background.png") no-repeat top left;
+  background: url("../img/header-lady.png") no-repeat bottom right, url("../img/header-background.jpg") no-repeat top left;
   background-size: contain, cover;
   height: 100%;
   padding-left: 175px;
