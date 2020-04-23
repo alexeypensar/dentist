@@ -178,7 +178,7 @@
 .modal__text {
   color: #828282;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-left: 12px;
   margin-top: 5px;
 }
@@ -186,7 +186,7 @@
 .modal__link {
   color: #828282;
   text-decoration: underline;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .modal__link:hover, .modal__link:focus {
   color: #828282;
@@ -210,6 +210,14 @@ a {
 
 button:hover, button:focus {
   cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 .header {

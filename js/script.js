@@ -88,7 +88,9 @@ for (let i = 0; i < btn.length; i++) {
             modalSubmitButton.innerHTML = 'Добавить';
             modalForm.setAttribute('enctype','multipart/form-data');
 
-            if (modalForm.childNodes.length <= 13) {
+            console.log(modalForm.childNodes.length);
+
+            if (modalForm.childNodes.length <= 19) {
                 document.getElementsByClassName('modal__text')[0].before(inputFile);
             }
 

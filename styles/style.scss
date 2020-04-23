@@ -10,7 +10,6 @@ html {
 }
 
 
-// todo ещё раз после всего все шрифты проверить на rem
 html, body {
     font-family: 'Proxima Nova', sans-serif;
     font-size: 16px;
@@ -25,6 +24,14 @@ a {
 
 button:hover, button:focus {
     cursor: pointer;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
 }
 
 //.container {
@@ -990,8 +997,6 @@ button:hover, button:focus {
         margin-bottom: 0;
     }
 }
-
-
 
 
 .contacts {

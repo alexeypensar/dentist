@@ -94,8 +94,11 @@
 
         <form class="modal__form" id="modalForm" action="send/send.php">
             <h3 class="questions__heading" id="modalHeading"></h3>
-            <input class="questions__input" name="name" type="text" placeholder="ФИО" required>
-            <input class="questions__input" name="phone" type="tel" placeholder="Ваш телефон" required>
+            <label for="modalName" class="visually-hidden">Ваше имя</label>
+            <input class="questions__input" id="modalName" name="name" type="text" placeholder="ФИО" required>
+            <label for="modalPhone" class="visually-hidden">Ваше имя</label>
+            <input class="questions__input" id="modalPhone" name="phone" type="tel" placeholder="Ваш телефон" required>
+            <label for="modalInput" class="visually-hidden">Ваше имя</label>
             <input class="questions__input" name="message" id="modalInput" type="text" placeholder="Комментарий (необязателен)">
             <p class="modal__text">Отправляя заявку, Вы соглашаетесь с <a class="modal__link" href="#">политикой обработки персональных данных</a></p>
             <button class="header__button modal__button" type="submit" id="modalSubmitButton">Записаться</button>
@@ -546,12 +549,14 @@
             <form action="send/send.php" id="contactsForm" method="post" class="contacts__questions">
 
                 <h3 class="questions__heading">Остались вопросы?</h3>
-                <input class="questions__input" name="name" type="text" placeholder="Ваше имя">
-                <input class="questions__input" name="phone" type="tel" placeholder="Ваш телефон">
-                <input class="questions__input" name="message" type="text" placeholder="Сообщение">
+                <label for="contactsName" class="visually-hidden">Ваше имя</label>
+                <input class="questions__input" id="contactsName" name="name" type="text" placeholder="Ваше имя">
+                <label for="contactsPhone" class="visually-hidden">Ваш телефон</label>
+                <input class="questions__input" id="contactsPhone" name="phone" type="tel" placeholder="Ваш телефон">
+                <label for="contactsMessage" class="visually-hidden">Ваше сообщение</label>
+                <input class="questions__input" id="contactsMessage" name="message" type="text" placeholder="Сообщение">
                 <p class="modal__text">Отправляя заявку, Вы соглашаетесь с <a class="modal__link" href="#">политикой обработки персональных данных</a></p>
                 <button class="header__button" type="submit">Отправить</button>
-<!--                todo добавить popup при отправке сообщения-->
             </form>
         </article>
 

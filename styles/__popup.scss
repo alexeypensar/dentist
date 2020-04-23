@@ -90,7 +90,7 @@
 .modal__text {
     color: $lightgray-color;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 0.875rem;
     margin-left: 12px;
     margin-top: 5px;
 
@@ -99,7 +99,7 @@
 .modal__link {
     color: $lightgray-color;
     text-decoration: underline;
-    font-size: 14px;
+    font-size: 0.875rem;
 
     &:hover, &:focus {
         color: $lightgray-color;
