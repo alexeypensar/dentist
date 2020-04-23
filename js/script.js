@@ -61,6 +61,7 @@ let modalSubmitButton = document.getElementById('modalSubmitButton');
 let modalForm = document.getElementById('modalForm');
 let inputFile = document.createElement('input');
 inputFile.setAttribute('type', 'file');
+inputFile.setAttribute('name', 'avatar');
 inputFile.style.margin = '10px auto';
 
 
@@ -86,8 +87,6 @@ for (let i = 0; i < btn.length; i++) {
             pricesPlaceholder.placeholder = 'Введите текст отзыва';
             modalSubmitButton.innerHTML = 'Добавить';
             modalForm.setAttribute('enctype','multipart/form-data');
-            console.log(modalForm.childNodes.length);
-            console.log(modalForm.childNodes);
 
             if (modalForm.childNodes.length <= 13) {
                 document.getElementsByClassName('modal__text')[0].before(inputFile);
@@ -116,3 +115,55 @@ window.onclick = function (event) {
     }
 };
 
+
+
+// отправка форм в PHPMailer - модальное окно
+
+$('#modalForm').trigger('reset');
+$(function() {
+    'use strict';
+    $('#form').on('submit', function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: 'send.php',
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            data: new FormData(this),
+            success: function(msg) {
+                console.log(msg);
+                if (msg == 'ok') {
+                    alert('Сообщение отправлено. Наши сотрудники свяжутся с Вами.');
+                    $('#modalForm').trigger('reset'); // очистка формы
+                } else {
+                    alert('Ошибка, сообщение не отправлено. Попробуйте ещё раз или позвоните нам.');
+                }
+            }
+        });
+    });
+});
+// отправка форм в PHPMailer - окно в блоке с контактами
+
+$('#contactsForm').trigger('reset');
+$(function() {
+    'use strict';
+    $('#form').on('submit', function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: 'send.php',
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            data: new FormData(this),
+            success: function(msg) {
+                console.log(msg);
+                if (msg == 'ok') {
+                    alert('Сообщение отправлено. Наши сотрудники свяжутся с Вами.');
+                    $('#contactsForm').trigger('reset'); // очистка формы
+                } else {
+                    alert('Ошибка, сообщение не отправлено. Попробуйте ещё раз или позвоните нам.');
+                }
+            }
+        });
+    });
+});
