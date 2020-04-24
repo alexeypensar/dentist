@@ -19,7 +19,7 @@
         url('../img/header-background.jpg');
         background-repeat: no-repeat;
         background-size: contain, cover;
-        background-position: bottom -150px right -240px, top left;
+        background-position: bottom 0 right -240px, top left;
 
     }
 
@@ -28,7 +28,17 @@
         url('../img/header-background.webp');
         background-repeat: no-repeat;
         background-size: contain, cover;
-        background-position: bottom -150px right -240px, top left;
+        background-position: bottom 0 right -240px, top left;
+    }
+
+    .header__info {
+        padding-left: 80px;
+
+    }
+
+    .header__icons {
+        width: 75%;
+        justify-content: flex-start;
     }
 
 
@@ -40,6 +50,8 @@
     .container {
         max-width: 1158px;
     }
+
+
 
 }
 @media screen and (max-width: 759.98px) {

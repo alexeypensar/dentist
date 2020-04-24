@@ -1271,14 +1271,23 @@ button:hover, button:focus {
     background-image: url("../img/header-lady.png"), url("../img/header-background.jpg");
     background-repeat: no-repeat;
     background-size: contain, cover;
-    background-position: bottom -150px right -240px, top left;
+    background-position: bottom 0 right -240px, top left;
   }
 
   .webp .header__info {
     background-image: url("../img/header-lady.webp"), url("../img/header-background.webp");
     background-repeat: no-repeat;
     background-size: contain, cover;
-    background-position: bottom -150px right -240px, top left;
+    background-position: bottom 0 right -240px, top left;
+  }
+
+  .header__info {
+    padding-left: 80px;
+  }
+
+  .header__icons {
+    width: 75%;
+    justify-content: flex-start;
   }
 }
 @media screen and (max-width: 1199.98px) {
