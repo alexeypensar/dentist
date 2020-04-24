@@ -101,6 +101,8 @@ button:hover, button:focus {
     align-items: center;
 }
 
+
+
 .header__li:not(:last-child) {
     margin-right: 45px;
 }
@@ -292,6 +294,49 @@ button:hover, button:focus {
 
 }
 
+.mobile-menu__wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.mobile-menu__icon {
+    width: 35px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    position: relative;
+    display: none;
+    z-index: 9999;
+    //transition: all 0.4s ease;
+
+
+    &::before {
+        position: absolute;
+        top: -8px;
+        left: 0;
+        content: '';
+        width: 35px;
+        height: 3px;
+        background-color: #fff;
+        border-radius: 3px;
+        transition: all 0.4s ease;
+    }
+    &::after {
+        position: absolute;
+        top: 8px;
+        left: 0;
+        content: '';
+        width: 35px;
+        height: 3px;
+        background-color: #fff;
+        border-radius: 3px;
+        transition: all 0.4s ease;
+    }
+}
+
 
 .header__figcaption-text_top {
     font-weight: 300;
@@ -305,6 +350,7 @@ button:hover, button:focus {
     font-weight: 400;
     font-size: 1rem;
     color: $main-color;
+    white-space: nowrap;
 }
 
 .header__figcaption-link {

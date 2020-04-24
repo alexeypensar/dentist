@@ -208,3 +208,24 @@ $(function() {
         });
     });
 });
+
+
+// header menu adaptive
+
+let mobileMenuButton = document.getElementById('mobileMenuButton');
+let mobileMenu = document.getElementById('mobileMenu');
+let mobileLinks = document.getElementsByClassName('header__link');
+
+document.addEventListener('DOMContentLoaded', function() {
+    mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('header__ul_visible');
+    });
+
+    for (let i = 0; i < mobileLinks.length; i++) {
+        mobileLinks[i].addEventListener('click', function() {
+            mobileMenu.classList.toggle('header__ul_visible');
+        });
+    }
+
+});
+
