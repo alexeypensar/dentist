@@ -1464,6 +1464,14 @@ button:hover, button:focus {
     width: 100%;
     height: 100%;
   }
+
+  .information__ul_right .information__li {
+    margin-left: 100px;
+  }
+
+  .information__link {
+    margin: 0 auto;
+  }
 }
 @media screen and (max-width: 991.98px) {
   .webp .header__info {
@@ -1498,6 +1506,14 @@ button:hover, button:focus {
 
   .header__figure {
     margin-right: 0;
+  }
+
+  .information__ul_wrapper {
+    flex-direction: column;
+  }
+
+  .information__ul_right .information__li {
+    margin-left: 0;
   }
 }
 @media screen and (max-width: 759.98px) {
@@ -1540,6 +1556,22 @@ button:hover, button:focus {
   }
   .header__figure .header__figcaption .header__figcaption-text_bottom, .header__figure .header__figcaption.header__figcaption-text_top {
     white-space: normal;
+  }
+
+  .information__number {
+    margin-right: 10px;
+  }
+
+  .information__ul_left .information__li:first-of-type .information__number {
+    margin-right: 15px;
+  }
+
+  .information__ul_right .information__li:last-of-type .information__number {
+    margin-right: 15px;
+  }
+
+  .information__link {
+    width: 240px;
   }
 }
 
