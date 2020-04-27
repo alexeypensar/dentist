@@ -49,6 +49,29 @@
         margin-right: 10px;
     }
 
+    .about-us {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        flex-direction: column;
+        //position: relative;
+    }
+
+    .about-us_right {
+        //top: 0;
+        position: relative;
+        margin-top: 20px;
+        &::after {
+            width: 80%;
+        }
+    }
+    .about-us_left {
+        margin-right: 0;
+        width: 100%;
+    }
+    .about-us__text {
+        margin-right: 20px;
+    }
+
 
 
 

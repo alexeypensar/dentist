@@ -1337,6 +1337,29 @@ button:hover, button:focus {
   .contacts__figure-wrapper {
     margin-right: 10px;
   }
+
+  .about-us {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    flex-direction: column;
+  }
+
+  .about-us_right {
+    position: relative;
+    margin-top: 20px;
+  }
+  .about-us_right::after {
+    width: 80%;
+  }
+
+  .about-us_left {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .about-us__text {
+    margin-right: 20px;
+  }
 }
 @media screen and (max-width: 1199.98px) {
   .container {
