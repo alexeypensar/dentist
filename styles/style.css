@@ -95,7 +95,7 @@
 
 .modal__content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 20vh auto 0 auto;
   padding: 25px;
   border: none;
   border-left: 15px solid #D2FFC2;
@@ -685,6 +685,7 @@ button:hover, button:focus {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  height: auto;
 }
 
 .sale__banner {
@@ -695,14 +696,6 @@ button:hover, button:focus {
   justify-content: space-between;
   align-items: flex-start;
   position: relative;
-}
-.sale__banner .sale__image {
-  position: absolute;
-  object-fit: cover;
-  z-index: -1;
-  overflow: hidden;
-  max-width: 698px;
-  max-height: 270px;
 }
 .sale__banner:hover, .sale__banner:focus {
   text-decoration: none;
@@ -716,6 +709,16 @@ button:hover, button:focus {
   animation-duration: 0.8s;
   animation-timing-function: ease;
   animation-delay: 0.4s;
+}
+
+.sale__banner_left {
+  background: url("../img/sale-1.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.sale__banner_right {
+  background: url("../img/sale-2.jpg") no-repeat center center;
+  background-size: cover;
 }
 
 .sale__heading_left {
@@ -1361,10 +1364,12 @@ button:hover, button:focus {
     margin-right: 20px;
   }
 
+  .sale__banner_right {
+    margin-left: 20px;
+  }
+
   .sale__banner {
-    width: 45%;
     justify-content: space-around;
-    height: auto;
   }
   .sale__banner .sale__heading_right, .sale__banner .sale__heading_left {
     margin-top: 20px;
@@ -1377,11 +1382,6 @@ button:hover, button:focus {
   }
   .sale__banner .sale__arrow {
     margin-bottom: 20px;
-  }
-  .sale__banner .sale__image {
-    max-width: initial;
-    max-height: initial;
-    overflow: visible;
   }
 }
 @media screen and (max-width: 1199.98px) {
@@ -1496,8 +1496,14 @@ button:hover, button:focus {
     margin: 0 auto;
   }
 
-  .sale__banner {
-    height: 100%;
+  .sale__banners {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .sale__banner_right {
+    margin-top: 40px;
+    margin-left: 0;
   }
 }
 @media screen and (max-width: 991.98px) {
@@ -1559,7 +1565,8 @@ button:hover, button:focus {
   }
 
   .sale__banner_right {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    margin-top: 0;
   }
 
   .sale__heading_left {

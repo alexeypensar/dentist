@@ -44,6 +44,8 @@ $('.slider').slick({
 
 
 
+
+
 Modernizr.on('webp', function(result) {
     if (result) {
         let imgs = $('.slider picture source');
@@ -76,7 +78,6 @@ Modernizr.on('webp', function(result) {
         });
     }
 });
-
 
 
 

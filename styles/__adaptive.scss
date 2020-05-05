@@ -72,14 +72,16 @@
         margin-right: 20px;
     }
 
-    .sale__banners {
-        //align-items: flex-start;
+    .sale__banner_right {
+        margin-left: 20px;
     }
 
+
+
     .sale__banner {
-        width: 45%;
+        //width: 45%;
         justify-content: space-around;
-        height: auto;
+        //height: auto;
 
         & .sale__heading_right, .sale__heading_left {
             margin-top: 20px;
@@ -94,11 +96,7 @@
             margin-bottom: 20px;
         }
 
-        & .sale__image {
-            max-width: initial;
-            max-height: initial;
-            overflow: visible;
-        }
+
 
         //height: auto;
     }
@@ -232,8 +230,15 @@
         margin: 0 auto;
     }
 
-    .sale__banner {
-        height: 100%;
+    .sale__banners {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+
+    .sale__banner_right {
+        margin-top: 40px;
+        margin-left: 0;
     }
 
 
@@ -307,8 +312,12 @@
     }
 
     .sale__banner_right {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
+        margin-top: 0;
+
     }
+
+
 
     .sale__heading_left {
         line-height: 100%;

@@ -577,6 +577,7 @@ button:hover, button:focus {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    height: auto;
 }
 
 .sale__banner {
@@ -588,14 +589,20 @@ button:hover, button:focus {
     align-items: flex-start;
     position: relative;
 
-    & .sale__image {
-        position: absolute;
-        object-fit: cover;
-        z-index: -1;
-        overflow: hidden;
-        max-width: 698px;
-        max-height: 270px;
-    }
+    //& .sale__image {
+    //    position: absolute;
+    //    width: 100%;
+    //    height: 100%;
+    //    //object-fit: cover;
+    //    z-index: -1;
+    //    overflow: hidden;
+    //    //max-width: 698px;
+    //    //max-height: 270px;
+    //    top: 0;
+    //    left: 0;
+    //    right: 0;
+    //    bottom: 0;
+    //}
 
     &:hover, &:focus {
         text-decoration: none;
@@ -612,9 +619,18 @@ button:hover, button:focus {
             animation-delay: 0.4s;
         }
     }
-
-
 }
+
+.sale__banner_left {
+    background: url('../img/sale-1.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.sale__banner_right {
+    background: url('../img/sale-2.jpg') no-repeat center center;
+    background-size: cover;
+}
+
 
 .sale__heading_left {
     font-weight: 700;

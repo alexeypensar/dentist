@@ -12,7 +12,7 @@
 
 .modal__content {
     background-color: #fefefe;
-    margin: 15% auto;
+    margin: 20vh auto 0 auto;
     padding: 25px;
     border: none;
     border-left: 15px solid $green-color;
@@ -23,6 +23,8 @@
     height: 450px;
 
 }
+
+//todo ширина модального окна при малом разрешении (из-за ширины 400пикселей)
 
 .modal__form {
     display: flex;
