@@ -1395,6 +1395,14 @@ button:hover, button:focus {
   .sale__banner .sale__arrow {
     margin-bottom: 20px;
   }
+
+  .our-team__gallery .slick-prev {
+    left: 20px;
+  }
+
+  .our-team__gallery .slick-next {
+    right: 20px;
+  }
 }
 @media screen and (max-width: 1199.98px) {
   .container {
@@ -1649,6 +1657,19 @@ button:hover, button:focus {
 
   .service {
     width: 100%;
+  }
+
+  .item__description {
+    padding-left: 0;
+  }
+
+  .item__name, .item__text {
+    text-align: center;
+  }
+
+  .our-team__gallery .slick-arrow {
+    width: 50px;
+    height: 50px;
   }
 }
 

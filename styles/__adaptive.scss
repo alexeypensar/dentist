@@ -96,10 +96,16 @@
             margin-bottom: 20px;
         }
 
-
-
-        //height: auto;
     }
+
+    .our-team__gallery .slick-prev {
+        left: 20px;
+    }
+    .our-team__gallery .slick-next {
+        right: 20px;
+    }
+
+
 
 
 
@@ -417,5 +423,17 @@
 
     .service {
         width: 100%;
+    }
+
+    .item__description {
+        padding-left: 0;
+
+    }
+    .item__name, .item__text {
+        text-align: center;
+    }
+    .our-team__gallery .slick-arrow {
+        width: 50px;
+        height: 50px;
     }
 }
