@@ -589,20 +589,7 @@ button:hover, button:focus {
     align-items: flex-start;
     position: relative;
 
-    //& .sale__image {
-    //    position: absolute;
-    //    width: 100%;
-    //    height: 100%;
-    //    //object-fit: cover;
-    //    z-index: -1;
-    //    overflow: hidden;
-    //    //max-width: 698px;
-    //    //max-height: 270px;
-    //    top: 0;
-    //    left: 0;
-    //    right: 0;
-    //    bottom: 0;
-    //}
+
 
     &:hover, &:focus {
         text-decoration: none;
@@ -621,15 +608,30 @@ button:hover, button:focus {
     }
 }
 
-.sale__banner_left {
-    background: url('../img/sale-1.jpg') no-repeat center center;
+.sale__banner {
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
 }
 
-.sale__banner_right {
-    background: url('../img/sale-2.jpg') no-repeat center center;
-    background-size: cover;
+.webp .sale__banner_left {
+    background-image: url('../img/sale-1.webp');
+
 }
+
+.webp .sale__banner_right {
+    background-image: url('../img/sale-2.webp');
+}
+
+.no-webp .sale__banner_left {
+    background-image: url('../img/sale-1.jpg');
+}
+
+.no-webp .sale__banner_right {
+    background-image: url('../img/sale-2.jpg');
+}
+
+
 
 
 .sale__heading_left {

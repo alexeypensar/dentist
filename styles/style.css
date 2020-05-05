@@ -711,14 +711,26 @@ button:hover, button:focus {
   animation-delay: 0.4s;
 }
 
-.sale__banner_left {
-  background: url("../img/sale-1.jpg") no-repeat center center;
+.sale__banner {
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
 }
 
-.sale__banner_right {
-  background: url("../img/sale-2.jpg") no-repeat center center;
-  background-size: cover;
+.webp .sale__banner_left {
+  background-image: url("../img/sale-1.webp");
+}
+
+.webp .sale__banner_right {
+  background-image: url("../img/sale-2.webp");
+}
+
+.no-webp .sale__banner_left {
+  background-image: url("../img/sale-1.jpg");
+}
+
+.no-webp .sale__banner_right {
+  background-image: url("../img/sale-2.jpg");
 }
 
 .sale__heading_left {
