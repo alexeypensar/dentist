@@ -1584,6 +1584,10 @@ button:hover, button:focus {
   .sale__heading_left {
     line-height: 100%;
   }
+
+  .service {
+    width: 45%;
+  }
 }
 @media screen and (max-width: 759.98px) {
   .container {
@@ -1641,6 +1645,10 @@ button:hover, button:focus {
 
   .information__link {
     width: 240px;
+  }
+
+  .service {
+    width: 100%;
   }
 }
 

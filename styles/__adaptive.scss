@@ -317,13 +317,17 @@
 
     }
 
-
-
     .sale__heading_left {
         line-height: 100%;
     }
 
+    .service {
+        width: 45%;
+    }
+
 }
+
+
 @media screen and (max-width: 759.98px) {
     .container {
         max-width: 717px;
@@ -409,5 +413,9 @@
 
     .information__link {
         width: 240px;
+    }
+
+    .service {
+        width: 100%;
     }
 }
