@@ -1664,6 +1664,51 @@ button:hover, button:focus {
   .container {
     max-width: 717px;
   }
+
+  .footer {
+    height: 220px;
+    background: none;
+    width: 100vw;
+  }
+
+  .footer__wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .footer__logo {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 70px;
+    padding-left: 10px;
+  }
+
+  .footer__info {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 10px;
+    height: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .footer__text {
+    padding-left: 0;
+  }
+
+  .footer__info_right {
+    align-items: flex-start;
+  }
+
+  .footer__logo, .footer__info {
+    width: 100%;
+  }
+
+  .footer__wrapper {
+    height: auto;
+    flex-direction: column;
+  }
 }
 @media screen and (max-width: 575.98px) {
   .container {
@@ -1748,7 +1793,7 @@ button:hover, button:focus {
 }
 @media screen and (max-width: 399.98px) {
   .header__info_h2 {
-    font-size: 2.8rem;
+    font-size: 2.75rem;
   }
 }
 
