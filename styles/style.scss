@@ -593,11 +593,10 @@ button:hover, button:focus {
 
     &:hover, &:focus {
         text-decoration: none;
+        filter: sepia(20%);
+        transition: all 0.4s ease;
 
-        & .sale__image {
-            transform: scale(1.05);
-            transition: all 0.4s ease;
-        }
+
 
         & .sale__arrow {
             animation-name: sale;
@@ -1173,6 +1172,10 @@ button:hover, button:focus {
 
 .contacts__map, .contacts__questions {
     width: 50%;
+}
+
+.contacts__map {
+    overflow: hidden;
 }
 
 .contacts__questions {

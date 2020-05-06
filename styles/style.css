@@ -699,9 +699,7 @@ button:hover, button:focus {
 }
 .sale__banner:hover, .sale__banner:focus {
   text-decoration: none;
-}
-.sale__banner:hover .sale__image, .sale__banner:focus .sale__image {
-  transform: scale(1.05);
+  filter: sepia(20%);
   transition: all 0.4s ease;
 }
 .sale__banner:hover .sale__arrow, .sale__banner:focus .sale__arrow {
@@ -1187,6 +1185,10 @@ button:hover, button:focus {
   width: 50%;
 }
 
+.contacts__map {
+  overflow: hidden;
+}
+
 .contacts__questions {
   padding: 80px 120px;
   height: 576px;
@@ -1533,6 +1535,34 @@ button:hover, button:focus {
   .feedback__item {
     width: 30%;
   }
+
+  .contacts__map-and-questions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contacts__map {
+    width: 70%;
+  }
+
+  .contacts__questions {
+    margin-top: 30px;
+    width: 70%;
+    padding: 0 20px 0 0;
+    height: auto;
+    align-items: center;
+  }
+  .contacts__questions .header__button {
+    margin-top: 20px;
+  }
+
+  .questions__input {
+    margin-bottom: 15px;
+  }
+
+  .contacts__figure:nth-child(5) {
+    margin-left: 0;
+  }
 }
 @media screen and (max-width: 991.98px) {
   .webp .header__info {
@@ -1612,6 +1642,23 @@ button:hover, button:focus {
   .feedback__item {
     width: 100%;
   }
+
+  .service {
+    align-items: center;
+  }
+
+  .contacts__icons {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 15px;
+  }
+
+  .contacts__figure {
+    margin-bottom: 20px;
+  }
+  .contacts__figure:nth-child(5), .contacts__figure:nth-child(6) {
+    display: none;
+  }
 }
 @media screen and (max-width: 759.98px) {
   .container {
@@ -1621,10 +1668,6 @@ button:hover, button:focus {
 @media screen and (max-width: 575.98px) {
   .container {
     max-width: 570px;
-  }
-
-  html, body {
-    font-size: 12px;
   }
 
   .header__info_h2 {
@@ -1670,6 +1713,9 @@ button:hover, button:focus {
   .information__link {
     width: 240px;
   }
+  .information__link::before {
+    left: -40px;
+  }
 
   .service {
     width: 100%;
@@ -1686,6 +1732,23 @@ button:hover, button:focus {
   .our-team__gallery .slick-arrow {
     width: 50px;
     height: 50px;
+  }
+
+  .feedback__buttons {
+    flex-direction: column;
+  }
+  .feedback__buttons .header__button {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .contacts__map, .contacts__questions {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 399.98px) {
+  .header__info_h2 {
+    font-size: 2.8rem;
   }
 }
 
