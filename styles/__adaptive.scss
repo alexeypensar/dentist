@@ -281,6 +281,11 @@
         margin-left: 0;
     }
 
+    .scroll-link {
+        padding-top: 70px;
+        margin-top: -70px;
+    }
+
 
 
 
@@ -292,12 +297,15 @@
     html, body {
         //font-size: 12px;
     }
+
+    .header__info {
+        min-height: calc(100vmax - 70px);
+    }
     .webp .header__info {
         padding-left: 15px;
         padding-right: 15px;
         align-items: center;
         justify-content: space-around;
-        min-height: calc(100vh - 70px);
         background-image: url(../img/header-background.webp);
         background-repeat: no-repeat;
         background-size: cover;
@@ -464,6 +472,10 @@
     .header__navigation {
         height: 50px;
     }
+    .scroll-link {
+        padding-top: 70px;
+        margin-top: -70px;
+    }
 
     .header__ul_visible {
         top: 50px;
@@ -582,6 +594,14 @@
     .modal__content {
         width: 85vw;
     }
+
+    .header__info {
+        margin-top: 50px;
+    }
+
+    .information__heading {
+        line-height: 100%;
+    }
 }
 
 
@@ -591,7 +611,6 @@
     }
 }
 
-//todo высоту верхнего меню учитывать в мобильной версии по кликам на ссылку (чтобы после скролла до нужного блока заголовок показывался)
 
 //todo цвет скроллера сделать в цвета проекта (зелёный, наверное)
 

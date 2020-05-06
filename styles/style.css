@@ -1563,14 +1563,22 @@ button:hover, button:focus {
   .contacts__figure:nth-child(5) {
     margin-left: 0;
   }
+
+  .scroll-link {
+    padding-top: 70px;
+    margin-top: -70px;
+  }
 }
 @media screen and (max-width: 991.98px) {
+  .header__info {
+    min-height: calc(100vmax - 70px);
+  }
+
   .webp .header__info {
     padding-left: 15px;
     padding-right: 15px;
     align-items: center;
     justify-content: space-around;
-    min-height: calc(100vh - 70px);
     background-image: url(../img/header-background.webp);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1728,6 +1736,11 @@ button:hover, button:focus {
     height: 50px;
   }
 
+  .scroll-link {
+    padding-top: 70px;
+    margin-top: -70px;
+  }
+
   .header__ul_visible {
     top: 50px;
   }
@@ -1824,6 +1837,14 @@ button:hover, button:focus {
 
   .modal__content {
     width: 85vw;
+  }
+
+  .header__info {
+    margin-top: 50px;
+  }
+
+  .information__heading {
+    line-height: 100%;
   }
 }
 @media screen and (max-width: 399.98px) {
