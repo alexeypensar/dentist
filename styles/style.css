@@ -1525,6 +1525,14 @@ button:hover, button:focus {
     margin-top: 40px;
     margin-left: 0;
   }
+
+  .feedback__buttons .information__link {
+    margin: 0;
+  }
+
+  .feedback__item {
+    width: 30%;
+  }
 }
 @media screen and (max-width: 991.98px) {
   .webp .header__info {
@@ -1595,6 +1603,14 @@ button:hover, button:focus {
 
   .service {
     width: 45%;
+  }
+
+  .feedback__list {
+    flex-wrap: wrap;
+  }
+
+  .feedback__item {
+    width: 100%;
   }
 }
 @media screen and (max-width: 759.98px) {

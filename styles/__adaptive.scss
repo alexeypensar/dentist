@@ -247,6 +247,13 @@
         margin-left: 0;
     }
 
+    .feedback__buttons .information__link {
+        margin: 0;
+    }
+    .feedback__item {
+        width: 30%;
+    }
+
 
 
 
@@ -331,6 +338,15 @@
         width: 45%;
     }
 
+    .feedback__list {
+        flex-wrap: wrap;
+
+
+    }
+    .feedback__item {
+        width: 100%;
+    }
+
 }
 
 
@@ -339,9 +355,7 @@
         max-width: 717px;
     }
 
-    .header__info {
 
-    }
 
 }
 @media screen and (max-width: 575.98px) {
@@ -437,3 +451,5 @@
         height: 50px;
     }
 }
+
+//todo высоту линий у заголовков основных h2 проверить при адаптиве, когда раскладываются на две строчки
