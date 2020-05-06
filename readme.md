@@ -11,4 +11,5 @@ Landing page для стоматологической клиники
 
 - отсутствие ошибок https://validator.w3.org/
 - google page insights:
+
 ![google score](img/google.png)
