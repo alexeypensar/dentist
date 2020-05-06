@@ -8,7 +8,7 @@ Landing page для стоматологической клиники
 - вёрстка по БЭМ
 - flexbox
 - адаптив без bootstrap
-- сборщик gulp (автопрефиксер, минификация css)
 
 - отсутствие ошибок https://validator.w3.org/
-- Google page insights:
+- google page insights:
+![google score](img/google.png)
