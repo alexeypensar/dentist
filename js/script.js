@@ -1,4 +1,3 @@
-
 $('.slider').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -12,39 +11,9 @@ $('.slider').slick({
     touchMove: true,
     prevArrow:'<button class="slick-prev"></button>',
     nextArrow:'<button class="slick-next"></button>',
-    speed: 100,
-    // centerPadding: '0px',
+    speed: 100
 
-
-
-
-    //         responsive: [
-    //             {
-    //               breakpoint: 576,
-    //               settings: {
-    //                 centerMode: false,
-    //                 variableWidth: false,
-    //               }
-    //             },
-    //         ]
 });
-
-
-// let imgs = $('.slider img');
-// imgs.each(function(){
-//     let item = $(this).closest('.item');
-//     item.css({
-//         'background-image': 'url(' + $(this).attr('src') + ')',
-//         'background-position': 'center',
-//         '-webkit-background-size': 'cover',
-//         'background-size': 'cover'
-//     });
-//     $(this).hide();
-// });
-
-
-
-
 
 Modernizr.on('webp', function(result) {
     if (result) {
