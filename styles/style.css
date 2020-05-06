@@ -1659,6 +1659,15 @@ button:hover, button:focus {
   .contacts__figure:nth-child(5), .contacts__figure:nth-child(6) {
     display: none;
   }
+
+  .services {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .feedback {
+    margin-bottom: 100px;
+  }
 }
 @media screen and (max-width: 759.98px) {
   .container {
@@ -1715,6 +1724,19 @@ button:hover, button:focus {
     max-width: 570px;
   }
 
+  .header__navigation {
+    height: 50px;
+  }
+
+  .header__ul_visible {
+    top: 50px;
+  }
+
+  .header__logo-image {
+    width: 40px;
+    height: auto;
+  }
+
   .header__info_h2 {
     font-size: 3.2rem;
   }
@@ -1764,6 +1786,11 @@ button:hover, button:focus {
 
   .service {
     width: 100%;
+    margin-bottom: 45px;
+  }
+
+  .service__icon {
+    margin-bottom: 0;
   }
 
   .item__description {
@@ -1789,6 +1816,14 @@ button:hover, button:focus {
 
   .contacts__map, .contacts__questions {
     width: 100%;
+  }
+
+  .heading__secondary {
+    line-height: 50px;
+  }
+
+  .modal__content {
+    width: 85vw;
   }
 }
 @media screen and (max-width: 399.98px) {
